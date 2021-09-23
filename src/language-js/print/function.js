@@ -87,6 +87,7 @@ function printFunction(path, print, options, args) {
   }
 
   if (node.id) {
+    node.id.name = `${node.id.name} `;
     parts.push(print("id"));
   }
 
