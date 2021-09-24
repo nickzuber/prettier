@@ -69,7 +69,7 @@ function printTypeParameters(path, options, print, paramsKey) {
       indent([softline, join([",", line], path.map(print, paramsKey))]),
       trailingComma,
       softline,
-      ">",
+      "> ",
     ],
     { id: getTypeParametersGroupId(node) }
   );

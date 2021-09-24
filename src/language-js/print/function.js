@@ -87,7 +87,9 @@ function printFunction(path, print, options, args) {
   }
 
   if (node.id) {
-    node.id.name = `${node.id.name} `;
+    // Something like `foo<T> () {}`
+    const hasTypeParamter = node.typeParameters;
+    node.id.name = hasTypeParamter ? node.id.name : `${node.id.name} `;
     parts.push(print("id"));
   }
 
